@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Adivinanza</string>
+    <string name="start_game">Iniciar Juego</string>
+    <string name="select_attempts">Selecciona los intentos:</string>
+    <string name="insert_number">Ingresa un número del 0 al 100</string>
+    <string name="validate_number">Verificar número</string>
+    <string name="greater_number">El número ingresado es mayor</string>
+    <string name="smaller_number">El número ingresado es menor</string>
+    <string name="winner">¡Has ganado!</string>
+    <string name="looser">¡Has perdido!</string>
+    <string name="retry_game">Volver a jugar</string>
+    <string name="attempts_countdown">Te quedan %1$d intentos</string>
+    <string name="correct_number">El número correcto es %1$d</string>
+    <string name="invalid_range">El número debe estar comprendido entre 0 y 100</string>
+    <string name="empty_input">Ingresa un número para verificar</string>
+</resources>
