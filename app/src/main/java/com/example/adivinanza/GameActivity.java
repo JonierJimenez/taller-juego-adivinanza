@@ -32,7 +32,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         Random rand = new Random();
         correctNumber = rand.nextInt(101);
 
-        Log.i("magic_number", "" + correctNumber);
+        Log.i("correct_number", "" + correctNumber);
 
         numberInput = findViewById(R.id.number_input);
         attemptCountdownTxt = findViewById(R.id.attempts_countdown);
@@ -52,7 +52,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
                 if(TextUtils.isEmpty(value)){
                     Toast.makeText(this, R.string.empty_input, Toast.LENGTH_SHORT).show();
-                    return;
+                    break;
                 }
 
                 if(Integer.parseInt(value) > 100){
@@ -62,6 +62,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                         Intent intent = new Intent(GameActivity.this, WinnerActivity.class);
                         startActivity(intent);
                         finish();
+                        break;
                     }else if(Integer.parseInt(value) > correctNumber){
                         Toast.makeText(this, R.string.greater_number, Toast.LENGTH_SHORT).show();
                     }else{
@@ -76,9 +77,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                         intent.putExtra("correct_number", correctNumber);
                         startActivity(intent);
                         finish();
+                        break;
                     }
                 }
-
                 break;
         }
     }
